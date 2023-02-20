@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Upload</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Image Upload App</h1>
+    <form action="next-page.html" method="get"> 
+      <label for="file">Select an image to upload:</label>
+      <br><br>
+      <input type="file" name="image">
+      <input type="submit" value="Upload">
+      <br><br>
+      <img src="" id="rendered-image">
+    </form>
+    <script>
+      const renderFile = () => {
+        const render = document.querySelector('#rendered-image');
+        const file = document.querySelector('input[type=file]').files[0];
+        const reader = new FileReader();
+        reader.addEventListener('load', () => {
+          render.src = reader.result;
+        }, false);
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      };
+      document.querySelector('input[type=file]').addEventListener('change', renderFile);
+    </script>
+  </body>
+</html>
