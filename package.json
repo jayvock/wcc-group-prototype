@@ -4,19 +4,22 @@
   "description": "reverse image search kit ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jayvock/wcc-group-prototype.git"
   },
-  "author": "",
+  "author": "millieon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jayvock/wcc-group-prototype/issues"
   },
   "homepage": "https://github.com/jayvock/wcc-group-prototype#readme",
   "dependencies": {
-    "formidable": "^2.1.1"
-  }
+    "formidable": "^2.1.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {}
 }
