@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Image Upload</title>
+    <title>Reverse Image Search Kit</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>Image Upload App</h1>
-    <form action="next-page.html" method="get"> 
-      <label for="file">Select an image to upload:</label>
-      <br><br>
-      <input type="file" name="image">
-      <input type="submit" value="Upload">
-      <br><br>
-      <img src="" id="rendered-image">
+    <h1>R.I.S.K</h1>
+    <h2>Reverse Image Search Kit</h2>
+    <form action="next-page.html" method="get">
+      <div class="image-preview">
+        <img src="" id="rendered-image">
+      </div>
+      <div>
+        <label for="file">Select an image to upload:</label>
+        <input type="file" name="image">
+        <input type="submit" value="Upload">
+      </div>
     </form>
+    <br>
+    <footer>This tool allows anyone to upload an image to check if their likeness is being used online without their permission.</footer>
     <script>
       const renderFile = () => {
         const render = document.querySelector('#rendered-image');
