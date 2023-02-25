@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Search Results</title>
+    <title>Reverse Image Search Kit</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>Search Results</h1>
-    <img src="" alt="uploaded image" id="uploaded-image">
-    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const imageData = urlParams.get('image');
-      const uploadedImage = document.querySelector('#uploaded-image');
-      uploadedImage.src = imageData;
-    </script>
+    <h1>R.I.S.K</h1>
+    <h2>Reverse Image Search Kit</h2>
+    <main>       
+          <!-- Right Box -->
+          <div class="right-box">
+            <h4>Help & Resources</h4>
+            <p>Please find some useful links below to assist in removing these unsolicted images from the web.</p>
+        </div>
+        <!-- Search results -->
+        <h3>There are 3 Results of your likeness being used by other people</h3>
+        <div class="search-result">
+            <img src="/Selfie.jpg" alt="Image for search result">
+            <div class="search-result-content">
+              <br>
+              <a href="https://www.reddit.com/r/Girls/comments/sfsdsf/Just-hanging-out/">Reddit Thread</a>
+              <p class="description">Someone is using your likeness in a reddit thread.</p>
+              <cite class="url">https://www.reddit.com/r/Girls/comments/sfsdsf/Just-hanging-out/</cite>
+            </div>
+        </div>
+        <div class="search-result">
+            <img src="/Selfie2.png" alt="Image for search result">
+            <div class="search-result-content">
+              <br>
+              <a href="#">Title of the search result goes here</a>
+              <p class="description">This is a brief description of the search result, which is usually taken from the website's meta description tag.</p>
+              <cite class="url">www.example.com</cite>
+            </div>
+        </div>
+        <div class="search-result">
+            <img src="/Selfie3.jpg" alt="Image for search result">
+            <div class="search-result-content">
+              <br>
+              <a href="https://www.instagram.com/randomName129837347287/">Instagram Profile</a>
+              <p class="description">Someone is using your likeness in an instagram profile.</p>
+              <cite class="url">https://www.instagram.com/randomName129837347287/</cite>
+            </div>
+    </main>
   </body>
 </html>
