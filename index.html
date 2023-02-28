@@ -13,9 +13,14 @@
         <img src="" id="rendered-image">
       </div>
       <div>
-        <label for="file">Select an image to upload:</label>
+        <label for="file">Select an image to upload: (only .jpg .jpeg .png is allowed) </label>
         <input type="file" name="image">
-        <input type="submit" value="Upload">
+        <input type="submit" value="Upload" disabled>
+        <input id="myFileInput" type="submit" value="Take a picture"  accept="image/*;capture=camera">
+        <input type="file" accept="image/*" capture>
+     
+
+
       </div>
     </form>
     <br>
@@ -34,5 +39,21 @@
       };
       document.querySelector('input[type=file]').addEventListener('change', renderFile);
     </script>
+
+    <script>
+        var myInput = document.getElementById('myFileInput');
+        
+        function sendPic() {
+            var file = myInput.files[0];
+        
+            // Send file here either by adding it to a `FormData` object 
+            // and sending that via XHR, or by simply passing the file into 
+            // the `send` method of an XHR instance.
+        }
+        
+        myInput.addEventListener('change', sendPic, false);
+    </script>
+
+
   </body>
 </html>
