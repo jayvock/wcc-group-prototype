@@ -15,7 +15,7 @@
       <div>
         <label for="file">Select an image to upload:</label>
         <input type="file" name="image">
-        <input type="submit" value="Upload">
+        <input type="submit" value="Upload" id="submit-form" disabled="true">
       </div>
     </form>
     <br>
@@ -30,6 +30,10 @@
         }, false);
         if (file) {
           reader.readAsDataURL(file);
+          const form = document.getElementById("submit-form");
+          form.toggleAttribute("disabled");
+          form.style.backgroundColor = "#5bde8d";
+          console.log('here');
         }
       };
       document.querySelector('input[type=file]').addEventListener('change', renderFile);
