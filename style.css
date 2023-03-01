@@ -67,7 +67,7 @@ form input[type="file"] {
 }
 
 form input[type="submit"] {
-  background-color: #5bde8d;
+  background-color: #818181;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -78,7 +78,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #31b0d5;
+  background-color: #838383;
 }
 
 input#myFileInput{

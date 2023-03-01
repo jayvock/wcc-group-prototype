@@ -15,8 +15,11 @@
       <div>
         <label for="file">Select an image to upload: (only .jpg .jpeg .png is allowed) </label>
         <input type="file" name="image">
-        <input type="submit" value="Upload">
-   
+        <input type="submit" value="Upload" disabled>
+        <input id="myFileInput" type="submit" value="Take a picture"  accept="image/*;capture=camera">
+        <input type="file" accept="image/*" capture>
+     
+
 
       </div>
     </form>
@@ -45,6 +48,10 @@
         }, false);
         if (file) {
           reader.readAsDataURL(file);
+          const form = document.getElementById("submit-form");
+          form.toggleAttribute("disabled");
+          form.style.backgroundColor = "#5bde8d";
+          console.log('here');
         }
       };
       document.querySelector('input[type=file]').addEventListener('change', renderFile);
