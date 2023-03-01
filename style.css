@@ -90,6 +90,17 @@ form input[type="submit"]:hover {
   background-color: #838383;
 }
 
+form input[type="text"] {
+  /* margin-bottom: 20px; */
+  background-color:#f1f1f1;
+  display: block;
+  width: 100%;
+  border: none;
+  /* background-color: #f2f2f2; */
+  /* padding: 10px; */
+  border-radius: 5px;
+}
+
 input#myFileInput{
   background-color: black;
   color: #fff;
@@ -151,4 +162,25 @@ input#myFileInput{
   margin-top: 44px;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.right-box .email{
+  background-color: #f1f1f1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 400px;
+  float: right;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 44px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+label#email{
+
+  background-color: white;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
 }
