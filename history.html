@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,36 +14,13 @@
             <h4>Help & Resources</h4>
             <p>Please find some useful links below to assist in removing these unsolicted images from the web.</p>
             <br>
-            <h4>Subscription</h4>
-            <form action="next-page.html" method="get">
             
-            <label for="text", id="email">Type in your email address to get notified for future detection of malicious use of your photo </label>
-            <input type="text" value='JohnDoe@gmail.com'>
-            <input type="submit" value="Submit">
           </form>
-          <script>
-            const renderFile = () => {
-  
-              const file = document.querySelector('input[type=text]').files[0];
-              const reader = new FileReader();
-              reader.addEventListener('load', () => {
-                file.src = reader.result;
-              }, false);
-              if (file) {
-                reader.readAsDataURL(file);
-                const form = document.getElementById("submit-form");
-                form.toggleAttribute("disabled");
-                form.style.backgroundColor = "#5bde8d";
-                console.log('here');
-              }
-            };
-            document.querySelector('input[type=text]').addEventListener('change', renderFile);
-          </script>
-      
+         
 
         </div>
         <!-- Search results -->
-        <h3>There are 3 Results of your likeness being used by other people</h3>
+        <h3>There are 1 new detection of your likeness being used by other people!</h3>
         <div class="search-result">
             <img src="/Selfie.jpg" alt="Image for search result">
             <div class="search-result-content">
@@ -52,6 +30,9 @@
               <cite class="url">https://www.reddit.com/r/Girls/comments/sfsdsf/Just-hanging-out/</cite>
             </div>
         </div>
+
+        <h3>The history records from last search result</h3>
+
         <div class="search-result">
             <img src="/Selfie2.png" alt="Image for search result">
             <div class="search-result-content">
