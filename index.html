@@ -15,14 +15,12 @@
       <div>
         <label for="file">Select an image to upload: (only .jpg .jpeg .png is allowed) </label>
         <input type="file" name="image">
-        <input type="submit" value="Upload" disabled>
-        <input id="start-camera" type="button" value="Start Camera"  accept="image/*;capture=camera">
+        <input type="submit" id="submit-form" value="Upload" disabled>
+        <input id="start-camera" type="button" value="Start Camera"  accept="image/*;capture=camera">        
+        <input id="click-photo" type="button" value="Take Photo"  accept="image/*;capture=camera">
         <video id="video" width="320" height="240" autoplay></video>
-        <input id="click-photo" type="button" value="Click Photo"  accept="image/*;capture=camera">
+
         <canvas id="canvas" width="320" height="240"></canvas>
-
-
-
       </div>
     </form>
 
@@ -32,17 +30,13 @@
       <input type="text" value='JohnDoe@gmail.com'>
       <input type="submit" value="Check History">
     </div>
-   
     </form>
-
-
-
-
 
     <br>
     <footer>This tool allows anyone to upload an image to check if their likeness is being used online without their permission.</footer>
    
-   <script>
+    <!-- File selection -->
+    <script>
       const renderFile = () => {
         const render = document.querySelector('#rendered-image');
         const file = document.querySelector('input[type=file]').files[0];
@@ -55,36 +49,33 @@
           const form = document.getElementById("submit-form");
           form.toggleAttribute("disabled");
           form.style.backgroundColor = "#5bde8d";
-          console.log('here');
+          console.log('Image Chosen');
         }
       };
       document.querySelector('input[type=file]').addEventListener('change', renderFile);
     </script>
 
+    <!-- Camera -->
+    <script>
+      let camera_button = document.querySelector("#start-camera");
+      let video = document.querySelector("#video");
+      let click_button = document.querySelector("#click-photo");
+      let canvas = document.querySelector("#canvas");
 
+      camera_button.addEventListener('click', async function() {
+   	    let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+	      video.srcObject = stream;
+      });
 
-
-<script>
-let camera_button = document.querySelector("#start-camera");
-let video = document.querySelector("#video");
-let click_button = document.querySelector("#click-photo");
-let canvas = document.querySelector("#canvas");
-
-camera_button.addEventListener('click', async function() {
-   	let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-	video.srcObject = stream;
-});
-
-click_button.addEventListener('click', function() {
-   	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-   	let image_data_url = canvas.toDataURL('image/jpeg');
-
-   	// data url of the image
-   	console.log(image_data_url);
-});
-</script>
-
-
+      click_button.addEventListener('click', function() {
+   	    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+   	    let image_data_url = canvas.toDataURL('image/jpeg');
+        const form = document.getElementById("submit-form");
+        form.toggleAttribute("disabled");
+        form.style.backgroundColor = "#5bde8d";
+        console.log('Photo Taken');
+      });
+    </script>
 
   </body>
 </html>
