@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>R.I.S.K</h1>
+    <h1>R.I.S.K.</h1>
     <h2>Reverse Image Search Kit</h2>
     <br>
     <form action="next-page.html" method="get">
@@ -15,9 +15,9 @@
       <div>
         <label for="file">Select an image to upload: (only .jpg .jpeg .png is allowed) </label>
         <input type="file" name="image">
-        <input type="submit" id="submit-form" value="Upload" disabled>
-        <input id="start-camera" type="button" value="Start Camera"  accept="image/*;capture=camera">        
-        <input id="click-photo" type="button" value="Take Photo"  accept="image/*;capture=camera">
+        <input type="submit" id="submit-form" class= "upload-btn" value="Upload" disabled>
+        <input id="start-camera" type="button" class= "btn" value="Start Camera"  accept="image/*;capture=camera">        
+        <input id="click-photo" type="button" class= "btn" value="Take Photo"  accept="image/*;capture=camera">
         <video id="video" width="320" height="240" autoplay></video>
 
         <canvas id="canvas" width="320" height="240"></canvas>
@@ -28,7 +28,7 @@
       <div>
       <label for="text", id="email">Type in your email address to check history of records </label>
       <input type="text" value='JohnDoe@gmail.com'>
-      <input type="submit" value="Check History">
+      <input type="submit" class="btn" value="Check History">
     </div>
     </form>
 
